@@ -135,6 +135,76 @@ $ mv temp ../dir2/  #移動
 ### 指令列命令模式(command-line mode)
 
 ## C語言:
+在linux系統上使用GCC編譯器，將C的程式碼編譯為執行檔
+
+### 編譯C code:
+寫好一支C code 如下並命名為helloworld.c:
+```c=
+#include <stdio.h>
+int main(){
+    printf("hello world\n");
+    return 0;
+}
+```
+執行gcc的命令將其轉為執行檔:
+```bash=
+#編譯C code
+$ gcc helloworld.c
+```
+gcc會直接產生一個**a.out**的檔案，現在來執行程式:
+```bash=
+#執行gcc編譯完成的程式
+$ ./a.out
+```
+輸出:  
+
+    hello world
+### gcc 其他參數使用
+---
+若要指定輸出執行檔的名稱，加上"-o"這個參數即可:
+```bash=
+#編譯helloworld.c這個檔案，並將執行檔改名為hello
+$ gcc -o hello helloworld.c
+$ ./hello
+```
+---
+若要編譯時加上除錯的功能，加上"-g"這個參數即可，為gdb除錯的意思
+```bash=
+$ gcc -g helloworld.c
+```
+舉例說明，寫好一支C code如下，使用gcc -g的除錯功能:
+```c=
+#include <stdio.h>
+int main(){
+    printf("hello world\n");
+    return 0                 #(故意忽略此處的分號)
+}
+```
+```bash=
+$ gcc -g helloworld.c
+```
+![](https://i.imgur.com/XJObvn8.png)
+
+---
+若要加上編譯時出現的警訊(warning)，則需要加上"-Wall"這個參數，一定要大寫!  
+舉例說明，寫好一支C code(testwall.c)如下，使用gcc -Wall的警訊功能:
+```c=
+#include <stdio.h>
+
+void main(){
+    int a=0.01;
+    return 3;
+}
+```
+```bash=
+$ gcc -Wall -o testwall testwall.c
+```
+![](https://i.imgur.com/BRPIZ97.png)
+
+(通常在編譯的時候最好都加上-Wall -g 去檢視自己的code)
+
+---
+...其他等我需要用到再補上
 
 ## python:
 
