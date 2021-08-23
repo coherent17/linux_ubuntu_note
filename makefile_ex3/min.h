@@ -1,0 +1,1 @@
+int findMin(int [], int);
