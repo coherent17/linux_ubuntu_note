@@ -1,0 +1,1 @@
+int findMax(int [], int);
