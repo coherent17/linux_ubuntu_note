@@ -1,4 +1,6 @@
 # Linux 使用筆記
+
+[TOC]
 ---
 ## 打開終端機:
 使用鍵盤輸入:   
@@ -477,6 +479,39 @@ clean:
 
 ## python:
 
+### 創立虛擬環境
+為了讓專案之間不要彼此汙染並且能夠有一個乾淨的環境，python提供一個創立virtual enviromnent的方法。
+1. 在.bashrc加入這一行  (我還不知道什麼意思><) <- SO CUTE 
+```
+export PATH="$HOME/.local/bin:$PATH"
+```
+2. 下載virtualenv
+```
+$ pip install virtualenv
+```
+3. 進到要創立虛擬環境的目錄底下
+4. 創立它  (輸入以下兩個指令都可以，但我還不知道差別><)
+```
+$ python3 -m venv venv
+```
+```
+$ virtualenv -p python3 venv
+```
+5. 啟動環境
+```
+$ source ./venv/bin/activate
+```  
+
+6. 關掉環境
+```
+$ deactivate
+```
+7. 就可以在這個環境裡為所欲為了
 ## git使用:
 
+
 ## Atom(文字編輯器)使用:
+       
+## 聊天區:
+我打玩了! 還有什麼更詳細的會再補充Xd 
+借我當成做筆記的地方哈哈 晚安!
